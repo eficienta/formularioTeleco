@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Suministros Telecomunicaciones</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      background-color: #f0f2f5;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      padding: 20px 30px;
+      color: #2c3e50;
+      border-bottom: 2px solid #ecf0f1;
+      text-align: center;
+    }
+
+    .header img {
+      max-width: 100px;
+      margin-right: 20px;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    }
+
+    .header h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-area {
+      padding: 30px;
+      background-color: #ffffff;
+    }
+
+    .intro {
+      font-size: 14px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      font-weight: 500;
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #3498db;
+      border-radius: 6px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #34495e;
+      font-size: 14px;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 2px solid #ecf0f1;
+      border-radius: 6px;
+      background: #ffffff;
+      transition: border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    input[type="number"]:focus,
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    input[type="number"][readonly] {
+      background-color: #f8f9fa;
+      border-color: #dfe6e9;
+      color: #7f8c8d;
+    }
+
+    .linea-config {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid #3498db;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .linea-config h4 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #2c3e50;
+      font-size: 16px;
+    }
+
+    button {
+      background: linear-gradient(90deg, #2c3e50, #3498db);
+      color: #ffffff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(90deg, #34495e, #2980b9);
+    }
+
+    .checkbox-group {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-group label {
+      font-weight: 400;
+      color: #7f8c8d;
+      font-size: 13px;
+    }
+
+    .checkbox-group a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .checkbox-group a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 15px;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .header img {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .form-area {
+        padding: 15px;
+      }
+
+      .form-row {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .linea-config .form-row {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <img src="logo-eficienta.png" alt="Logo Eficienta.ai">
+    <h2>Formulario Suministros Telecomunicaciones</h2>
+  </div>
+
+  <div class="form-area">
+    <div class="intro">
+      A continuación te pedimos tus datos para ver si podemos ofrecerte algo mejor, solo recibirás un correo con un resultado, si realmente no podemos mejorar tu precio, te informaremos igualmente pero no te vamos a molestar con llamadas. Por eso no te pedimos el teléfono todavía.
+    </div>
+    <form action="https://formspree.io/f/xrbqwdvo" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="codigoPostal">Código Postal</label>
+          <input type="text" id="codigoPostal" name="codigoPostal" required pattern="\d{5}" placeholder="Ej. 12345">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="velocidad">Velocidad de Fibra</label>
+          <select id="velocidad" name="velocidad">
+            <option value="">Seleccionar</option>
+            <option value="100">100 Mb</option>
+            <option value="300">300 Mb</option>
+            <option value="600">600 Mb</option>
+            <option value="1000">1000 Mb</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="lineas">Número de líneas móviles</label>
+          <input type="number" id="lineas" name="lineas" min="0" max="10">
+        </div>
+      </div>
+
+      <div id="lineasContainer"></div>
+
+      <div class="form-group">
+        <input type="checkbox" id="telefonoFijo" name="telefonoFijo">
+        <label for="telefonoFijo" style="display: inline; margin-left: 5px;">¿Desea incluir teléfono fijo?</label>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="presupuesto">¿Cuánto pagas al mes?</label>
+          <input type="number" id="presupuesto" name="presupuesto" min="0" step="0.01">
+        </div>
+        <div class="form-group">
+          <label for="presupuestoAnual">Coste estimado anual (€ / año)</label>
+          <input type="number" id="presupuestoAnual" name="presupuestoAnual" readonly>
+        </div>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="lopd" name="lopd" required>
+        <label for="lopd">He leído y acepto la <a href="#" target="_blank">política de protección de datos (LOPD)</a>, que incluye el tratamiento de mis datos personales para la gestión de esta solicitud, su análisis y comunicación de resultados, comprometiéndonos a no compartirlos con terceros sin consentimiento y a eliminarlos tras finalizar el proceso, salvo obligación legal.</label>
+      </div>
+
+      <br>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const inputLineas = document.getElementById("lineas");
+  inputLineas.addEventListener("input", generarLineas);
+  inputLineas.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      generarLineas();
+    }
+  });
+
+  const inputPresupuesto = document.getElementById("presupuesto");
+  const inputPresupuestoAnual = document.getElementById("presupuestoAnual");
+  inputPresupuesto.addEventListener("input", function() {
+    const mensual = parseFloat(inputPresupuesto.value) || 0;
+    const anual = (mensual * 12).toFixed(2);
+    inputPresupuestoAnual.value = anual;
+  });
+
+  function generarLineas() {
+    const container = document.getElementById("lineasContainer");
+    container.innerHTML = "";
+    const num = parseInt(document.getElementById("lineas").value) || 0;
+
+    for (let i = 1; i <= num; i++) {
+      const div = document.createElement("div");
+      div.className = "linea-config";
+      div.innerHTML = `
+        <h4>Línea ${i}</h4>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="datos${i}">Datos</label>
+            <select id="datos${i}" name="datos${i}">
+              <option value="5">5 GB</option>
+              <option value="10">10 GB</option>
+              <option value="20">20 GB</option>
+              <option value="ilimitado">Ilimitados</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="llamadas${i}">Llamadas</label>
+            <select id="llamadas${i}" name="llamadas${i}">
+              <option value="con-coste">Con coste</option>
+              <option value="ilimitadas" selected>Ilimitadas</option>
+            </select>
+          </div>
+        </div>
+      `;
+      container.appendChild(div);
+    }
+  }
+</script>
+
+</body>
+</html>
